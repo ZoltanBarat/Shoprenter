@@ -1,0 +1,553 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <meta http-equiv="X-UA-Compatible" content="ie=edge" />
+  <title>Shoprenter Task</title>
+  <link rel="stylesheet" href="reset.css" />
+  <link rel="stylesheet" href="style.css" />
+
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Quicksand:wght@400;700&display=swap" rel="stylesheet" />
+</head>
+
+<body>
+  <header>
+    <div class="header__wrapper">
+      <div class="header__contact-menu">
+        <p>09 87 654 3210</p>
+        <ul>
+          <li><a class="contact-menu__item" href="#">Kapcsolat</a></li>
+          <li class="separator">|</li>
+          <li><a class="contact-menu__item" href="#">Rólunk</a></li>
+          <li class="separator">|</li>
+          <li class="dropdown">
+            <div class="contact-menu__item">
+              Fizetés, szállítás<span>
+                <svg width="9" height="7" viewBox="0 0 9 30" xmlns="http://www.w3.org/2000/svg">
+                  <path d="M15.5704 30L18 27.5704L5.43826 15L18 2.42964L15.5704 0L0.561747 15L15.5704 30Z" />
+                </svg>
+              </span>
+            </div>
+            <div class="dropdown-menu">
+              <a href="#">Sub-menu 1</a>
+              <a href="#">Sub-menu 2</a>
+              <a href="#">Sub-menu 3</a>
+              <a href="#">Sub-menu 4</a>
+              <a href="#">Sub-menu 5</a>
+            </div>
+          </li>
+        </ul>
+      </div>
+      <div class="header__logo">
+        <h2><span>Teszt</span>téma</h2>
+      </div>
+      <div class="header__menu">
+        <div class="header__menu__search">
+          <form class="search-form">
+            <input class="search-field" placeholder="keresés..." type="text" />
+            <input class="search-field__submit" type="image" src="./src/menuIcons/searchIcon.svg" alt="Submit" />
+          </form>
+        </div>
+        <div class="header__menu-icons">
+          <a href="#"><img src="./src/menuIcons/accountIcon.svg" alt="account" /></a>
+          <a href="#"><img src="./src/menuIcons/likeIcon.svg" alt="like" /></a>
+          <a href="#"><img src="./src/menuIcons/chartIcon.svg" alt="chart" /></a>
+        </div>
+      </div>
+    </div>
+
+    <div id="mobileNav" class="center" onclick="showMenu()">&#9776;</div>
+    <div id="toggleMenu" class="mobilNavLinks --hidden">
+      <ul>
+        <li><a class="contact-menu__item" href="#">Kapcsolat</a></li>
+        <li><a class="contact-menu__item" href="#">Rólunk</a></li>
+        <li class="dropdown">
+          <p class="contact-menu__item">Fizetés, szállítás</p>
+          <div class="mobileNav__secondary">
+            <a href="#">Sub-menu 1</a>
+            <a href="#">Sub-menu 2</a>
+            <a href="#">Sub-menu 3</a>
+            <a href="#">Sub-menu 4</a>
+            <a href="#">Sub-menu 5</a>
+          </div>
+        </li>
+      </ul>
+
+      <ul>
+        <li><a class="nav-item hover-underline" href="#">ARCÁPOLÁS</a></li>
+        <li><a class="nav-item hover-underline" href="#">TESTÁPOLÁs</a></li>
+        <li><a class="nav-item hover-underline" href="#">HAJÁPOLÁS</a></li>
+        <li><a class="nav-item hover-underline" href="#">SMINK</a></li>
+        <li><a class="nav-item hover-underline" href="#">BŐRtípusok</a></li>
+        <li><a class="nav-item hover-underline" href="#">ÚJDONSÁGOK</a></li>
+        <li><a class="nav-item hover-underline" href="#">FÉRFIAKNAK</a></li>
+        <li><a class="nav-item hover-underline" href="#">BABA-MAMA</a></li>
+        <li>
+          <a class="nav-item hover-underline" href="#">AJÁNDÉK ÖTLETEK</a>
+        </li>
+        <li><a class="nav-item hover-underline" href="#">MÁRKÁK</a></li>
+        <li><a class="nav-item hover-underline" href="#">AKCIÓ</a></li>
+      </ul>
+    </div>
+
+    <nav id="nav" class="center">
+      <ul>
+        <li><a class="nav-item hover-underline" href="#">ARCÁPOLÁS</a></li>
+        <li><a class="nav-item hover-underline" href="#">TESTÁPOLÁs</a></li>
+        <li><a class="nav-item hover-underline" href="#">HAJÁPOLÁS</a></li>
+        <li><a class="nav-item hover-underline" href="#">SMINK</a></li>
+        <li><a class="nav-item hover-underline" href="#">BŐRtípusok</a></li>
+        <li><a class="nav-item hover-underline" href="#">ÚJDONSÁGOK</a></li>
+        <li><a class="nav-item hover-underline" href="#">FÉRFIAKNAK</a></li>
+        <li><a class="nav-item hover-underline" href="#">BABA-MAMA</a></li>
+        <li>
+          <a class="nav-item hover-underline" href="#">AJÁNDÉK ÖTLETEK</a>
+        </li>
+        <li><a class="nav-item hover-underline" href="#">MÁRKÁK</a></li>
+        <li><a class="nav-item hover-underline" href="#">AKCIÓ</a></li>
+      </ul>
+    </nav>
+  </header>
+
+  <section class="site__note center">
+    <img src="./src/labIcon.svg" alt="tube" />
+    <p>kizárólag növényi eredetű alkotó elemek</p>
+  </section>
+
+  <section class="slideshow">
+    <div class="slideshow-container">
+      <div class="slide">
+        <div class="slide__textWrapper">
+          <div class="slide__text">
+            <h1 class="slide__text__title">Lorem 1</h1>
+            <p class="slide__text__body">
+              Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do
+              eiusmod tempor incididunt.
+            </p>
+            <button class="button__black">
+              <p>részletek</p>
+              <svg width="17" height="10" viewBox="0 0 17 10" fill="none" xmlns="http://www.w3.org/2000/svg">
+                <path
+                  d="M0 5.81425H15.1294L11.6347 9.30889L12.3258 10L17 5.32583L12.3258 0.651657L11.6347 1.34277L15.1294 4.83741H0L0 5.81425Z" />
+              </svg>
+            </button>
+          </div>
+        </div>        
+        <img class="slide-image" src="./src/bannerImg.png" alt="" />        
+      </div>
+
+      <div class="slide">
+        <div class="slide__textWrapper">
+          <div class="slide__text">
+            <h1 class="slide__text__title">Lorem 2</h1>
+            <p class="slide__text__body">
+              Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do
+              eiusmod tempor incididunt.
+            </p>
+            <button class="button__black">
+              <p>részletek</p>
+              <svg width="17" height="10" viewBox="0 0 17 10" fill="none" xmlns="http://www.w3.org/2000/svg">
+                <path
+                  d="M0 5.81425H15.1294L11.6347 9.30889L12.3258 10L17 5.32583L12.3258 0.651657L11.6347 1.34277L15.1294 4.83741H0L0 5.81425Z" />
+              </svg>
+            </button>
+          </div>
+        </div>
+        <img class="slide-image" src="./src/bannerImg.png" alt="" />
+      </div>
+
+      <div class="slide">
+        <div class="slide__textWrapper">
+          <div class="slide__text">
+            <h1 class="slide__text__title">Lorem 3</h1>
+            <p class="slide__text__body">
+              Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do
+              eiusmod tempor incididunt.
+            </p>
+            <button class="button__black">
+              <p>részletek</p>
+              <svg width="17" height="10" viewBox="0 0 17 10" fill="none" xmlns="http://www.w3.org/2000/svg">
+                <path
+                  d="M0 5.81425H15.1294L11.6347 9.30889L12.3258 10L17 5.32583L12.3258 0.651657L11.6347 1.34277L15.1294 4.83741H0L0 5.81425Z" />
+              </svg>
+            </button>
+          </div>
+        </div>
+        <img class="slide-image" src="./src/bannerImg.png" alt="" />
+      </div>
+
+      <div class="slide">
+        <div class="slide__textWrapper">
+          <div class="slide__text">
+            <h1 class="slide__text__title">Lorem 4</h1>
+            <p class="slide__text__body">
+              Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do
+              eiusmod tempor incididunt.
+            </p>
+            <button class="button__black">
+              <p>részletek</p>
+              <svg width="17" height="10" viewBox="0 0 17 10" fill="none" xmlns="http://www.w3.org/2000/svg">
+                <path
+                  d="M0 5.81425H15.1294L11.6347 9.30889L12.3258 10L17 5.32583L12.3258 0.651657L11.6347 1.34277L15.1294 4.83741H0L0 5.81425Z" />
+              </svg>
+            </button>
+          </div>
+        </div>
+        <img class="slide-image" src="./src/bannerImg.png" alt="" />
+      </div>
+
+      <div class="slide">
+        <div class="slide__textWrapper">
+          <div class="slide__text">
+            <h1 class="slide__text__title">Lorem 5</h1>
+            <p class="slide__text__body">
+              Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do
+              eiusmod tempor incididunt.
+            </p>
+            <button class="button__black">
+              <p>részletek</p>
+              <svg width="17" height="10" viewBox="0 0 17 10" fill="none" xmlns="http://www.w3.org/2000/svg">
+                <path
+                  d="M0 5.81425H15.1294L11.6347 9.30889L12.3258 10L17 5.32583L12.3258 0.651657L11.6347 1.34277L15.1294 4.83741H0L0 5.81425Z" />
+              </svg>
+            </button>
+          </div>
+        </div>
+        <img class="slide-image" src="./src/bannerImg.png" alt="" />
+      </div>
+
+      <a class="prev" onclick="plusSlides(-1)"><img src="./src/arrow.svg" alt="arrow" /></a>
+      <a class="next" onclick="plusSlides(1)"><img src="./src/arrow.svg" alt="arrow" /></a>
+
+      <div class="dot-container">
+        <span class="dot" onclick="currentSlide(1)"></span>
+        <span class="dot" onclick="currentSlide(2)"></span>
+        <span class="dot" onclick="currentSlide(3)"></span>
+        <span class="dot" onclick="currentSlide(4)"></span>
+        <span class="dot" onclick="currentSlide(5)"></span>
+      </div>
+    </div>
+  </section>
+
+  <main>
+    <section class="titles">
+      <div class="title">
+        <img src="./src/titles/title1.png" alt="title" />
+        <h3 class="--left-title">Heading</h3>
+      </div>
+      <div class="title">
+        <img src="./src/titles/title2.png" alt="title" />
+        <h3 class="--left-title --white-title">Heading</h3>
+      </div>
+      <div class="title">
+        <img src="./src/titles/title3.png" alt="title" />
+        <h3 class="--right-title">Heading</h3>
+      </div>
+
+      <div class="title">
+        <img src="./src/titles/title4.png" alt="title" />
+        <h3 class="--left-title">Heading</h3>
+      </div>
+      <div class="title">
+        <img src="./src/titles/title5.png" alt="title" />
+        <h3 class="--right-title --white-title">Heading</h3>
+      </div>
+      <div class="title">
+        <img src="./src/titles/title6.png" alt="title" />
+        <h3 class="--right-title">Heading</h3>
+      </div>
+    </section>
+
+    <section class="actions">
+      <h4>akciós termékek</h4>
+
+      <div class="card-container">
+        <div class="card">
+          <div class="card__image">
+            <img src="./src/cards/card1.png" alt="product" />
+            <div class="card__image__like">
+              <svg class="card__image__like__icon" width="20" height="16" viewBox="0 0 25 20"
+                xmlns="http://www.w3.org/2000/svg">
+                <path
+                  d="M4.66465 12.5055L11.7325 19.7775C11.8674 19.9161 12.0534 19.9964 12.2504 20C12.2868 20 12.3233 19.9964 12.3598 19.9927C12.3926 19.9964 12.4291 20 12.4619 20H12.4692C12.6625 20 12.8485 19.9198 12.987 19.7775L20.0439 12.5128L22.6552 9.90153C24.9163 7.64041 24.9163 3.96061 22.6552 1.69949C21.5611 0.605397 20.1023 0 18.556 0C17.006 0 15.5509 0.60175 14.4568 1.69949L12.3561 3.7965L10.2591 1.69949C9.16501 0.605397 7.70622 0 6.15991 0C4.60994 0 3.1548 0.60175 2.06071 1.69949C-0.200413 3.96061 -0.200413 7.64041 2.06071 9.90153L4.66465 12.5055ZM3.08916 2.73158C3.93525 1.88548 5.04758 1.46244 6.15991 1.46244C7.27223 1.46244 8.38456 1.88548 9.23066 2.73158L11.8419 5.34282C12.1264 5.62728 12.5895 5.62728 12.874 5.34282L15.4852 2.73158C17.1774 1.03939 19.9309 1.03939 21.6231 2.73158C23.3153 4.42378 23.3153 7.17724 21.6231 8.86944L19.0046 11.488L12.3561 18.3297L5.70404 11.4807L3.0928 8.86944C1.39696 7.17724 1.39696 4.42378 3.08916 2.73158Z" />
+              </svg>
+            </div>
+          </div>
+
+          <div class="card__text">
+            <div class="card__title">
+              <p>Lorem ipsum dolor sit amet, consectetur adipiscing</p>
+            </div>
+            <div class="card__body">
+              <p>
+                Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed
+                do eiusmod tempor incididunt ut labore dolore magna aliqua
+                incididunt ut.
+              </p>
+            </div>
+            <div class="card__rate">
+              <img src="./src/rateStar-full.svg" alt="star" />
+              <img src="./src/rateStar-full.svg" alt="star" />
+              <img src="./src/rateStar-full.svg" alt="star" />
+              <img src="./src/rateStar-full.svg" alt="star" />
+              <img src="./src/rateStar-empty.svg" alt="star" />
+              <span class="raiting-text">(12)</span>
+            </div>
+            <div class="card__price">
+              <p><span class="price__old">12 300 Ft</span> 10 900 Ft</p>
+            </div>
+            <button class="card__button">Kosárba</button>
+          </div>
+        </div>
+
+        <div class="card">
+          <div class="card__image">
+            <img src="./src/cards/card2.png" alt="product" />
+            <div class="card__image__like">
+              <svg class="card__image__like__icon" width="20" height="16" viewBox="0 0 25 20"
+                xmlns="http://www.w3.org/2000/svg">
+                <path
+                  d="M4.66465 12.5055L11.7325 19.7775C11.8674 19.9161 12.0534 19.9964 12.2504 20C12.2868 20 12.3233 19.9964 12.3598 19.9927C12.3926 19.9964 12.4291 20 12.4619 20H12.4692C12.6625 20 12.8485 19.9198 12.987 19.7775L20.0439 12.5128L22.6552 9.90153C24.9163 7.64041 24.9163 3.96061 22.6552 1.69949C21.5611 0.605397 20.1023 0 18.556 0C17.006 0 15.5509 0.60175 14.4568 1.69949L12.3561 3.7965L10.2591 1.69949C9.16501 0.605397 7.70622 0 6.15991 0C4.60994 0 3.1548 0.60175 2.06071 1.69949C-0.200413 3.96061 -0.200413 7.64041 2.06071 9.90153L4.66465 12.5055ZM3.08916 2.73158C3.93525 1.88548 5.04758 1.46244 6.15991 1.46244C7.27223 1.46244 8.38456 1.88548 9.23066 2.73158L11.8419 5.34282C12.1264 5.62728 12.5895 5.62728 12.874 5.34282L15.4852 2.73158C17.1774 1.03939 19.9309 1.03939 21.6231 2.73158C23.3153 4.42378 23.3153 7.17724 21.6231 8.86944L19.0046 11.488L12.3561 18.3297L5.70404 11.4807L3.0928 8.86944C1.39696 7.17724 1.39696 4.42378 3.08916 2.73158Z" />
+              </svg>
+            </div>
+          </div>
+
+          <div class="card__text">
+            <div class="card__title">
+              <p>Lorem ipsum dolor sit amet, consectetur adipiscing</p>
+            </div>
+            <div class="card__body">
+              <p>
+                Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed
+                do eiusmod tempor incididunt ut labore dolore magna aliqua
+                incididunt ut.
+              </p>
+            </div>
+            <div class="card__rate">
+              <img src="./src/rateStar-full.svg" alt="star" />
+              <img src="./src/rateStar-full.svg" alt="star" />
+              <img src="./src/rateStar-full.svg" alt="star" />
+              <img src="./src/rateStar-full.svg" alt="star" />
+              <img src="./src/rateStar-empty.svg" alt="star" />
+              <span class="raiting-text">(12)</span>
+            </div>
+            <div class="card__price">
+              <p><span class="price__old">12 300 Ft</span> 10 900 Ft</p>
+            </div>
+            <button class="card__button">Kosárba</button>
+          </div>
+        </div>
+
+        <div class="card">
+          <div class="card__image">
+            <img src="./src/cards/card3.png" alt="product" />
+            <div class="card__image__like">
+              <svg class="card__image__like__icon" width="20" height="16" viewBox="0 0 25 20"
+                xmlns="http://www.w3.org/2000/svg">
+                <path
+                  d="M4.66465 12.5055L11.7325 19.7775C11.8674 19.9161 12.0534 19.9964 12.2504 20C12.2868 20 12.3233 19.9964 12.3598 19.9927C12.3926 19.9964 12.4291 20 12.4619 20H12.4692C12.6625 20 12.8485 19.9198 12.987 19.7775L20.0439 12.5128L22.6552 9.90153C24.9163 7.64041 24.9163 3.96061 22.6552 1.69949C21.5611 0.605397 20.1023 0 18.556 0C17.006 0 15.5509 0.60175 14.4568 1.69949L12.3561 3.7965L10.2591 1.69949C9.16501 0.605397 7.70622 0 6.15991 0C4.60994 0 3.1548 0.60175 2.06071 1.69949C-0.200413 3.96061 -0.200413 7.64041 2.06071 9.90153L4.66465 12.5055ZM3.08916 2.73158C3.93525 1.88548 5.04758 1.46244 6.15991 1.46244C7.27223 1.46244 8.38456 1.88548 9.23066 2.73158L11.8419 5.34282C12.1264 5.62728 12.5895 5.62728 12.874 5.34282L15.4852 2.73158C17.1774 1.03939 19.9309 1.03939 21.6231 2.73158C23.3153 4.42378 23.3153 7.17724 21.6231 8.86944L19.0046 11.488L12.3561 18.3297L5.70404 11.4807L3.0928 8.86944C1.39696 7.17724 1.39696 4.42378 3.08916 2.73158Z" />
+              </svg>
+            </div>
+          </div>
+
+          <div class="card__text">
+            <div class="card__title">
+              <p>Lorem ipsum dolor sit amet, consectetur adipiscing</p>
+            </div>
+            <div class="card__body">
+              <p>
+                Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed
+                do eiusmod tempor incididunt ut labore dolore magna aliqua
+                incididunt ut.
+              </p>
+            </div>
+            <div class="card__rate">
+              <img src="./src/rateStar-full.svg" alt="star" />
+              <img src="./src/rateStar-full.svg" alt="star" />
+              <img src="./src/rateStar-full.svg" alt="star" />
+              <img src="./src/rateStar-full.svg" alt="star" />
+              <img src="./src/rateStar-empty.svg" alt="star" />
+              <span class="raiting-text">(12)</span>
+            </div>
+            <div class="card__price">
+              <p><span class="price__old">12 300 Ft</span> 10 900 Ft</p>
+            </div>
+            <button class="card__button">Kosárba</button>
+          </div>
+        </div>
+
+        <div class="card">
+          <div class="card__image">
+            <img src="./src/cards/card4.png" alt="product" />
+            <div class="card__image__like">
+              <svg class="card__image__like__icon" width="20" height="16" viewBox="0 0 25 20"
+                xmlns="http://www.w3.org/2000/svg">
+                <path
+                  d="M4.66465 12.5055L11.7325 19.7775C11.8674 19.9161 12.0534 19.9964 12.2504 20C12.2868 20 12.3233 19.9964 12.3598 19.9927C12.3926 19.9964 12.4291 20 12.4619 20H12.4692C12.6625 20 12.8485 19.9198 12.987 19.7775L20.0439 12.5128L22.6552 9.90153C24.9163 7.64041 24.9163 3.96061 22.6552 1.69949C21.5611 0.605397 20.1023 0 18.556 0C17.006 0 15.5509 0.60175 14.4568 1.69949L12.3561 3.7965L10.2591 1.69949C9.16501 0.605397 7.70622 0 6.15991 0C4.60994 0 3.1548 0.60175 2.06071 1.69949C-0.200413 3.96061 -0.200413 7.64041 2.06071 9.90153L4.66465 12.5055ZM3.08916 2.73158C3.93525 1.88548 5.04758 1.46244 6.15991 1.46244C7.27223 1.46244 8.38456 1.88548 9.23066 2.73158L11.8419 5.34282C12.1264 5.62728 12.5895 5.62728 12.874 5.34282L15.4852 2.73158C17.1774 1.03939 19.9309 1.03939 21.6231 2.73158C23.3153 4.42378 23.3153 7.17724 21.6231 8.86944L19.0046 11.488L12.3561 18.3297L5.70404 11.4807L3.0928 8.86944C1.39696 7.17724 1.39696 4.42378 3.08916 2.73158Z" />
+              </svg>
+            </div>
+          </div>
+
+          <div class="card__text">
+            <div class="card__title">
+              <p>Lorem ipsum dolor sit amet, consectetur adipiscing</p>
+            </div>
+            <div class="card__body">
+              <p>
+                Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed
+                do eiusmod tempor incididunt ut labore dolore magna aliqua
+                incididunt ut.
+              </p>
+            </div>
+            <div class="card__rate">
+              <img src="./src/rateStar-full.svg" alt="star" />
+              <img src="./src/rateStar-full.svg" alt="star" />
+              <img src="./src/rateStar-full.svg" alt="star" />
+              <img src="./src/rateStar-full.svg" alt="star" />
+              <img src="./src/rateStar-empty.svg" alt="star" />
+              <span class="raiting-text">(12)</span>
+            </div>
+            <div class="card__price">
+              <p><span class="price__old">12 300 Ft</span> 10 900 Ft</p>
+            </div>
+            <button class="card__button">Kosárba</button>
+          </div>
+        </div>
+      </div>
+
+      <div class="center">
+        <button class="actions-button">
+          <p>Összes akciós termék</p>
+          <svg width="17" height="10" viewBox="0 0 17 10" fill="none" xmlns="http://www.w3.org/2000/svg">
+            <path
+              d="M0 5.81425H15.1294L11.6347 9.30889L12.3258 10L17 5.32583L12.3258 0.651657L11.6347 1.34277L15.1294 4.83741H0L0 5.81425Z"
+              fill="#212121" />
+          </svg>
+        </button>
+      </div>
+    </section>
+
+    <section class="videoWrapper center">
+      <div class="video">
+        <div class="video__text">
+          <h2 class="video__text__title">a természetes szépségért</h2>
+          <p class="video__text__body">
+            Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do
+            eiusmod tempor
+          </p>
+          <button class="button__black">
+            <p>megnézem</p>
+            <svg width="17" height="10" viewBox="0 0 17 10" fill="none" xmlns="http://www.w3.org/2000/svg">
+              <path
+                d="M0 5.81425H15.1294L11.6347 9.30889L12.3258 10L17 5.32583L12.3258 0.651657L11.6347 1.34277L15.1294 4.83741H0L0 5.81425Z" />
+            </svg>
+          </button>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <footer>
+    <div class="footer__links center">
+      <ul>
+        <li><a class="hover-underline" href="#">Kapcsolat</a></li>
+        <li class="separator">|</li>
+        <li><a class="hover-underline" href="#">Akciós termékek</a></li>
+        <li class="separator">|</li>
+        <li>
+          <a class="hover-underline" href="#">Adatvédelmi nyilatkozat</a>
+        </li>
+        <li class="separator">|</li>
+        <li><a class="hover-underline" href="#">Vásárlási feltételek</a></li>
+        <li class="separator">|</li>
+        <li><a class="hover-underline" href="#">Fizetés, szállítás</a></li>
+        <li class="separator">|</li>
+        <li><a class="hover-underline" href="#">Adatvédelem</a></li>
+        <li class="separator">|</li>
+        <li><a class="hover-underline" href="#">Segítség</a></li>
+        <li class="separator">|</li>
+        <li><a class="hover-underline" href="#">Rólunk</a></li>
+      </ul>
+    </div>
+    <div class="footer__contact center">
+      <ul>
+        <li>
+          <p>4028 Debrecen, Kassai út 129</p>
+        </li>
+        <li class="separator">|</li>
+        <li>
+          <a class="footer__contact__email hover-underline" href="mailto:info@shoprenter.hu">info@shoprenter.hu</a>
+        </li>
+        <li class="separator">|</li>
+        <li>
+          <p>+36-1/234-5012</p>
+        </li>
+        <li class="separator">|</li>
+        <li>
+          <p>Nyitvatartás: h-p 9-17</p>
+        </li>
+      </ul>
+    </div>
+    <div class="footer__social center">
+      <a href="#"><img src="./src/icons/FacebookIcon.svg" alt="facebook" /></a>
+      <a href="#"><img src="./src/icons/InstagramIcon.svg" alt="instagramm" /></a>
+      <a href="#"><img src="./src/icons/YoutubeIcon.svg" alt="youtube" /></a>
+      <a href="#"><img src="./src/icons/MessengerIcon.svg" alt="messenger" /></a>
+      <a href="#"><img src="./src/icons/TwitterIcon.svg" alt="twitter" /></a>
+    </div>
+    <div class="footer-copyright center">
+      <p>© 2021 Teszts téma</p>
+    </div>
+    <div class="footer__lang center">
+      <div class="footer__lang__lang-selector">
+        <ul>
+          <li><a class="--lang-selected" href="#">HU</a></li>
+          <li class="separator">|</li>
+          <li><a href="#">EN</a></li>
+        </ul>
+      </div>
+
+      <select name="currency" id="currency">
+        <option value="huf">Huf</option>
+        <option value="usd">Usd</option>
+        <option value="eur">Eur</option>
+      </select>
+    </div>
+    <div class="footer__text center">
+      <p>
+        Sed ut perspiciatis unde omnis iste natus error sit voluptatem
+        accusantium doloremque laudantium, totam rem aperiam, eaque ipsa quae
+        ab illo inventore veritatis et quasi architecto beatae vitae dicta
+        sunt explicabo. Nemo enim ipsam voluptatem quia voluptas sit
+        aspernatur aut odit aut fugit, sed quia consequuntur magni dolores eos
+        qui ratione voluptatem sequi nesciunt. Neque porro quisquam est, qui
+        dolorem ipsum quia dolor sit amet, consectetur, adipisci velit, sed
+        quia non numquam eius modi tempora incidunt ut labore et dolore magnam
+        aliquam quaerat voluptatem. Ut enim ad minima veniam, quis nostrum
+        exercitationem ullam corporis suscipit laboriosam, nisi ut aliquid ex
+        ea commodi consequatur? Quis autem vel eum iure reprehenderit qui in
+        ea voluptate velit esse quam nihil molestiae consequatur, vel illum
+        qui dolorem eum fugiat quo voluptas nulla pariatur?
+      </p>
+    </div>
+  </footer>
+  <section class="footer-logos center">
+    <div class="footer-logos__wrapper">
+      <img src="./src/logos/logo1.png" alt="gls" />
+      <img src="./src/logos/logo2.png" alt="dpd" />
+      <img src="./src/logos/logo3.png" alt="paypal" />
+      <img src="./src/logos/logo4.png" alt="mastercard" />
+      <img src="./src/logos/logo5.png" alt="maestro" />
+      <img src="./src/logos/logo6.png" alt="achievement" />
+      <img src="./src/logos/logo7.png" alt="arukereso" />
+    </div>
+  </section>
+
+  <script src="scripts.js"></script>
+</body>
+
+</html>
